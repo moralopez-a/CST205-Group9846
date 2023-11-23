@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <a href="{{ url_for('index') }}">Back to Search</a>
+    <h1 style="text-align: center;">Search Results</h1>
+    <hr>
+    <ul>
+        {% for recall in recalls %}
+            <li>
+                <strong>Product Type:</strong> {{ recall.product_type }}
+                <br><br>
+                <strong>State:</strong> {{ recall.state }}
+                <br><br>
+                <strong>Product Description:</strong> {{ recall.product_description }}
+                <br><br>
+                <strong>Recall Reason:</strong> {{ recall.reason_for_recall }}
+            </li>
+        {% endfor %}
+    </ul>
+    <hr> 
+</body>
+</html>
