@@ -18,7 +18,7 @@ API_URL = "https://api.fda.gov/food/enforcement.json"
 def index():
     return render_template('index.html')
 
-@app.route('/search', methods=['POST'])
+@app.route('/search', methods = ['POST'])
 def search():
     user_input = request.form.get('input')
     params = {'search': user_input}
