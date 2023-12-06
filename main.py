@@ -9,7 +9,6 @@ bootstrap = Bootstrap5(app)
 
 
 
-
 API_URL = "https://api.fda.gov/food/enforcement.json"
 
 @app.route('/')
